@@ -19,6 +19,8 @@
   --violet-blue: hsla(256, 72%, 46%, 1);
   --persian-blue: hsla(241, 72%, 46%, 0);
 
+  --gradient-blue-purple: linear-gradient(to bottom, var(--light-slate-blue), var(--light-royal-blue));
+
   background-color: var(--pale-blue);
   font-family: "Hanken Grotesk", sans-serif;
   font-weight: 500;
@@ -56,6 +58,7 @@ h2 {
 }
 
 .container > div {
+  padding: 2.25rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -64,7 +67,6 @@ h2 {
 }
 
 .results {
-  padding: 2rem;
   color: var(--white);
   display: flex;
   flex-direction: column;
@@ -74,7 +76,7 @@ h2 {
   background-color: var(--white);
   border-radius: 1.75rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-  background: linear-gradient(to bottom, var(--light-slate-blue), var(--light-royal-blue));
+  background: var(--gradient-blue-purple);
 }
 
 .results h2 {
@@ -115,4 +117,88 @@ h2 {
 }
 
 .summary {
+  height: 100%;
+  color: var(--dark-gray-blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.summary h2 {
+  color: var(--dark-gray-blue);
+  align-self: flex-start;
+}
+
+.score-part {
+  height: 3rem;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
+  border-radius: 0.5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 700;
+}
+
+.score-part:last-of-type {
+  margin-bottom: 2rem;
+}
+
+.icon-and-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.score-part.reaction {
+  color: var(--light-red);
+  background-color: hsla(0, 100%, 67%, 0.05);
+}
+
+.score-part.memory {
+  color: var(--orangey-yellow);
+  background-color: hsla(39, 100%, 56%, 0.05);
+}
+
+.score-part.verbal {
+  color: var(--green-teal);
+  background-color: hsla(166, 100%, 37%, 0.05);
+}
+
+.score-part.visual {
+  color: var(--cobalt-blue);
+  background-color: hsla(234, 85%, 45%, 0.05);
+}
+
+.icon {
+  margin-right: 0.5rem;
+}
+
+.score-x-of-100 {
+  color: hsla(224, 30%, 27%, 0.5);
+  /* font-weight: 500; */
+}
+
+.score-x-of-100 > span {
+  color: var(--dark-gray-blue);
+}
+
+button.main-button {
+  /* margin-top: 2rem; */
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  border: none;
+  background-color: var(--dark-gray-blue);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+}
+
+button.main-button:hover {
+  background: var(--gradient-blue-purple);
 }
