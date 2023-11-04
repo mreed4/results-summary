@@ -38,7 +38,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100dvh;
 }
 
 h2 {
@@ -201,4 +201,26 @@ button.main-button {
 
 button.main-button:hover {
   background: var(--gradient-blue-purple);
+}
+
+@media screen and (max-width: 375px) {
+  body,
+  html {
+    padding: 0;
+    margin: 0;
+  }
+
+  .container {
+    flex-direction: column;
+    width: 100%;
+    border-radius: 0 0 2rem 2rem;
+  }
+
+  .results {
+    border-radius: 0 0 1.75rem 1.75rem;
+  }
+
+  .container > div {
+    width: 100%;
+  }
 }
